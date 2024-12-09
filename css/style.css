@@ -1,0 +1,292 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Loader */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 5px solid #ccc;
+    border-top: 5px solid #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Authentication Section */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+}
+
+.auth-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-container form input, .auth-container form select, .auth-container form button {
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.auth-container form button {
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.auth-container form button:hover {
+    background: #0056b3;
+}
+
+/* Main Layout */
+.container-main {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.container-left {
+    width: 25%;
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.container-left .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.container-left .profile p {
+    margin: 0;
+}
+
+.container-left .menu {
+    margin: 20px 0;
+}
+
+.container-left .menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container-left .menu ul li {
+    margin: 15px 0;
+}
+
+.container-left .menu ul li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.container-left .menu ul li a i {
+    margin-right: 10px;
+}
+
+.container-left .logout a {
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Right Main Section */
+.container-right {
+    width: 75%;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.container-sub {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.container-sub .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-sub .header h2 {
+    font-size: 1.5rem;
+}
+
+.card-holder {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.card-holder .card {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.card .marker span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card .marker p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card i {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #e74c3c;
+}
+
+.card i:hover {
+    color: #c0392b;
+}
+
+/* Add New Task */
+.add-new {
+    margin-top: 20px;
+}
+
+.add-new .card-new {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.add-new .card-new .group1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.add-new input[type="text"], .add-new input[type="date"], .add-new select {
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dashboard */
+#dashboard-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+}
+
+#dashboard-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#dashboard-section p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+#dashboard-section button {
+    margin-top: 20px;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+#dashboard-section button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-main {
+        flex-direction: column;
+    }
+
+    .container-left {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container-right {
+        width: 100%;
+        padding: 10px;
+    }
+}
